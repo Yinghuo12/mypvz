@@ -1,0 +1,67 @@
+[
+{
+  "directory": "C:/Users/Administrator/Desktop/project/pvz/build",
+  "command": "g++   @CMakeFiles/mypvz.dir/includes_CXX.rsp -O3 -DNDEBUG   -Wno-conversion-null -std=gnu++11 -o CMakeFiles/mypvz.dir/src/Animator.cpp.obj -c C:/Users/Administrator/Desktop/project/pvz/src/Animator.cpp",
+  "file": "C:/Users/Administrator/Desktop/project/pvz/src/Animator.cpp"
+},
+{
+  "directory": "C:/Users/Administrator/Desktop/project/pvz/build",
+  "command": "g++   @CMakeFiles/mypvz.dir/includes_CXX.rsp -O3 -DNDEBUG   -Wno-conversion-null -std=gnu++11 -o CMakeFiles/mypvz.dir/src/BattleController.cpp.obj -c C:/Users/Administrator/Desktop/project/pvz/src/BattleController.cpp",
+  "file": "C:/Users/Administrator/Desktop/project/pvz/src/BattleController.cpp"
+},
+{
+  "directory": "C:/Users/Administrator/Desktop/project/pvz/build",
+  "command": "g++   @CMakeFiles/mypvz.dir/includes_CXX.rsp -O3 -DNDEBUG   -Wno-conversion-null -std=gnu++11 -o CMakeFiles/mypvz.dir/src/BattleLevel.cpp.obj -c C:/Users/Administrator/Desktop/project/pvz/src/BattleLevel.cpp",
+  "file": "C:/Users/Administrator/Desktop/project/pvz/src/BattleLevel.cpp"
+},
+{
+  "directory": "C:/Users/Administrator/Desktop/project/pvz/build",
+  "command": "g++   @CMakeFiles/mypvz.dir/includes_CXX.rsp -O3 -DNDEBUG   -Wno-conversion-null -std=gnu++11 -o CMakeFiles/mypvz.dir/src/Camera.cpp.obj -c C:/Users/Administrator/Desktop/project/pvz/src/Camera.cpp",
+  "file": "C:/Users/Administrator/Desktop/project/pvz/src/Camera.cpp"
+},
+{
+  "directory": "C:/Users/Administrator/Desktop/project/pvz/build",
+  "command": "g++   @CMakeFiles/mypvz.dir/includes_CXX.rsp -O3 -DNDEBUG   -Wno-conversion-null -std=gnu++11 -o CMakeFiles/mypvz.dir/src/Controller.cpp.obj -c C:/Users/Administrator/Desktop/project/pvz/src/Controller.cpp",
+  "file": "C:/Users/Administrator/Desktop/project/pvz/src/Controller.cpp"
+},
+{
+  "directory": "C:/Users/Administrator/Desktop/project/pvz/build",
+  "command": "g++   @CMakeFiles/mypvz.dir/includes_CXX.rsp -O3 -DNDEBUG   -Wno-conversion-null -std=gnu++11 -o CMakeFiles/mypvz.dir/src/CoreMinimal.cpp.obj -c C:/Users/Administrator/Desktop/project/pvz/src/CoreMinimal.cpp",
+  "file": "C:/Users/Administrator/Desktop/project/pvz/src/CoreMinimal.cpp"
+},
+{
+  "directory": "C:/Users/Administrator/Desktop/project/pvz/build",
+  "command": "g++   @CMakeFiles/mypvz.dir/includes_CXX.rsp -O3 -DNDEBUG   -Wno-conversion-null -std=gnu++11 -o CMakeFiles/mypvz.dir/src/GameStatics.cpp.obj -c C:/Users/Administrator/Desktop/project/pvz/src/GameStatics.cpp",
+  "file": "C:/Users/Administrator/Desktop/project/pvz/src/GameStatics.cpp"
+},
+{
+  "directory": "C:/Users/Administrator/Desktop/project/pvz/build",
+  "command": "g++   @CMakeFiles/mypvz.dir/includes_CXX.rsp -O3 -DNDEBUG   -Wno-conversion-null -std=gnu++11 -o CMakeFiles/mypvz.dir/src/InputComponent.cpp.obj -c C:/Users/Administrator/Desktop/project/pvz/src/InputComponent.cpp",
+  "file": "C:/Users/Administrator/Desktop/project/pvz/src/InputComponent.cpp"
+},
+{
+  "directory": "C:/Users/Administrator/Desktop/project/pvz/build",
+  "command": "g++   @CMakeFiles/mypvz.dir/includes_CXX.rsp -O3 -DNDEBUG   -Wno-conversion-null -std=gnu++11 -o CMakeFiles/mypvz.dir/src/Math.cpp.obj -c C:/Users/Administrator/Desktop/project/pvz/src/Math.cpp",
+  "file": "C:/Users/Administrator/Desktop/project/pvz/src/Math.cpp"
+},
+{
+  "directory": "C:/Users/Administrator/Desktop/project/pvz/build",
+  "command": "g++   @CMakeFiles/mypvz.dir/includes_CXX.rsp -O3 -DNDEBUG   -Wno-conversion-null -std=gnu++11 -o CMakeFiles/mypvz.dir/src/ResourceManager.cpp.obj -c C:/Users/Administrator/Desktop/project/pvz/src/ResourceManager.cpp",
+  "file": "C:/Users/Administrator/Desktop/project/pvz/src/ResourceManager.cpp"
+},
+{
+  "directory": "C:/Users/Administrator/Desktop/project/pvz/build",
+  "command": "g++   @CMakeFiles/mypvz.dir/includes_CXX.rsp -O3 -DNDEBUG   -Wno-conversion-null -std=gnu++11 -o CMakeFiles/mypvz.dir/src/SpriteRenderer.cpp.obj -c C:/Users/Administrator/Desktop/project/pvz/src/SpriteRenderer.cpp",
+  "file": "C:/Users/Administrator/Desktop/project/pvz/src/SpriteRenderer.cpp"
+},
+{
+  "directory": "C:/Users/Administrator/Desktop/project/pvz/build",
+  "command": "g++   @CMakeFiles/mypvz.dir/includes_CXX.rsp -O3 -DNDEBUG   -Wno-conversion-null -std=gnu++11 -o CMakeFiles/mypvz.dir/src/VisualInterface.cpp.obj -c C:/Users/Administrator/Desktop/project/pvz/src/VisualInterface.cpp",
+  "file": "C:/Users/Administrator/Desktop/project/pvz/src/VisualInterface.cpp"
+},
+{
+  "directory": "C:/Users/Administrator/Desktop/project/pvz/build",
+  "command": "g++   @CMakeFiles/mypvz.dir/includes_CXX.rsp -O3 -DNDEBUG   -Wno-conversion-null -std=gnu++11 -o CMakeFiles/mypvz.dir/main.cpp.obj -c C:/Users/Administrator/Desktop/project/pvz/main.cpp",
+  "file": "C:/Users/Administrator/Desktop/project/pvz/main.cpp"
+}
+]

@@ -1,0 +1,3 @@
+"C:\Program Files\cmake-3.17.0-rc3-win64-x64\bin\cmake.exe" -E rm -f CMakeFiles\mypvz.dir/objects.a
+"C:\Program Files\mingw64\bin\ar.exe" cr CMakeFiles\mypvz.dir/objects.a @CMakeFiles\mypvz.dir\objects1.rsp
+g++    -Wl,--whole-archive CMakeFiles\mypvz.dir/objects.a -Wl,--no-whole-archive  -o mypvz.exe -Wl,--out-implib,libmypvz.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\mypvz.dir\linklibs.rsp

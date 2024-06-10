@@ -1,0 +1,1 @@
+  -LC:/Users/Administrator/Desktop/project/pvz/lib  -lUuid -lwinmm -lmsimg32 -lgdi32 -limm32 -loleaut32 -lole32 -lGdiPlus -leasyx -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 
