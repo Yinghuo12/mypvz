@@ -130,10 +130,24 @@ CMakeFiles/mypvz.dir/src/Camera.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/mypvz.dir/src/Camera.cpp.s"
 	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:/Users/Administrator/Desktop/project/pvz/src/Camera.cpp -o CMakeFiles/mypvz.dir/src/Camera.cpp.s
 
+CMakeFiles/mypvz.dir/src/Collider.cpp.obj: CMakeFiles/mypvz.dir/flags.make
+CMakeFiles/mypvz.dir/src/Collider.cpp.obj: CMakeFiles/mypvz.dir/includes_CXX.rsp
+CMakeFiles/mypvz.dir/src/Collider.cpp.obj: ../src/Collider.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:/Users/Administrator/Desktop/project/pvz/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/mypvz.dir/src/Collider.cpp.obj"
+	g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/mypvz.dir/src/Collider.cpp.obj -c C:/Users/Administrator/Desktop/project/pvz/src/Collider.cpp
+
+CMakeFiles/mypvz.dir/src/Collider.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/mypvz.dir/src/Collider.cpp.i"
+	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:/Users/Administrator/Desktop/project/pvz/src/Collider.cpp > CMakeFiles/mypvz.dir/src/Collider.cpp.i
+
+CMakeFiles/mypvz.dir/src/Collider.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/mypvz.dir/src/Collider.cpp.s"
+	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:/Users/Administrator/Desktop/project/pvz/src/Collider.cpp -o CMakeFiles/mypvz.dir/src/Collider.cpp.s
+
 CMakeFiles/mypvz.dir/src/Controller.cpp.obj: CMakeFiles/mypvz.dir/flags.make
 CMakeFiles/mypvz.dir/src/Controller.cpp.obj: CMakeFiles/mypvz.dir/includes_CXX.rsp
 CMakeFiles/mypvz.dir/src/Controller.cpp.obj: ../src/Controller.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:/Users/Administrator/Desktop/project/pvz/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/mypvz.dir/src/Controller.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:/Users/Administrator/Desktop/project/pvz/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/mypvz.dir/src/Controller.cpp.obj"
 	g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/mypvz.dir/src/Controller.cpp.obj -c C:/Users/Administrator/Desktop/project/pvz/src/Controller.cpp
 
 CMakeFiles/mypvz.dir/src/Controller.cpp.i: cmake_force
@@ -147,7 +161,7 @@ CMakeFiles/mypvz.dir/src/Controller.cpp.s: cmake_force
 CMakeFiles/mypvz.dir/src/CoreMinimal.cpp.obj: CMakeFiles/mypvz.dir/flags.make
 CMakeFiles/mypvz.dir/src/CoreMinimal.cpp.obj: CMakeFiles/mypvz.dir/includes_CXX.rsp
 CMakeFiles/mypvz.dir/src/CoreMinimal.cpp.obj: ../src/CoreMinimal.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:/Users/Administrator/Desktop/project/pvz/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/mypvz.dir/src/CoreMinimal.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:/Users/Administrator/Desktop/project/pvz/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/mypvz.dir/src/CoreMinimal.cpp.obj"
 	g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/mypvz.dir/src/CoreMinimal.cpp.obj -c C:/Users/Administrator/Desktop/project/pvz/src/CoreMinimal.cpp
 
 CMakeFiles/mypvz.dir/src/CoreMinimal.cpp.i: cmake_force
@@ -161,7 +175,7 @@ CMakeFiles/mypvz.dir/src/CoreMinimal.cpp.s: cmake_force
 CMakeFiles/mypvz.dir/src/GameStatics.cpp.obj: CMakeFiles/mypvz.dir/flags.make
 CMakeFiles/mypvz.dir/src/GameStatics.cpp.obj: CMakeFiles/mypvz.dir/includes_CXX.rsp
 CMakeFiles/mypvz.dir/src/GameStatics.cpp.obj: ../src/GameStatics.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:/Users/Administrator/Desktop/project/pvz/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/mypvz.dir/src/GameStatics.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:/Users/Administrator/Desktop/project/pvz/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/mypvz.dir/src/GameStatics.cpp.obj"
 	g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/mypvz.dir/src/GameStatics.cpp.obj -c C:/Users/Administrator/Desktop/project/pvz/src/GameStatics.cpp
 
 CMakeFiles/mypvz.dir/src/GameStatics.cpp.i: cmake_force
@@ -175,7 +189,7 @@ CMakeFiles/mypvz.dir/src/GameStatics.cpp.s: cmake_force
 CMakeFiles/mypvz.dir/src/InputComponent.cpp.obj: CMakeFiles/mypvz.dir/flags.make
 CMakeFiles/mypvz.dir/src/InputComponent.cpp.obj: CMakeFiles/mypvz.dir/includes_CXX.rsp
 CMakeFiles/mypvz.dir/src/InputComponent.cpp.obj: ../src/InputComponent.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:/Users/Administrator/Desktop/project/pvz/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/mypvz.dir/src/InputComponent.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:/Users/Administrator/Desktop/project/pvz/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/mypvz.dir/src/InputComponent.cpp.obj"
 	g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/mypvz.dir/src/InputComponent.cpp.obj -c C:/Users/Administrator/Desktop/project/pvz/src/InputComponent.cpp
 
 CMakeFiles/mypvz.dir/src/InputComponent.cpp.i: cmake_force
@@ -189,7 +203,7 @@ CMakeFiles/mypvz.dir/src/InputComponent.cpp.s: cmake_force
 CMakeFiles/mypvz.dir/src/Math.cpp.obj: CMakeFiles/mypvz.dir/flags.make
 CMakeFiles/mypvz.dir/src/Math.cpp.obj: CMakeFiles/mypvz.dir/includes_CXX.rsp
 CMakeFiles/mypvz.dir/src/Math.cpp.obj: ../src/Math.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:/Users/Administrator/Desktop/project/pvz/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/mypvz.dir/src/Math.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:/Users/Administrator/Desktop/project/pvz/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/mypvz.dir/src/Math.cpp.obj"
 	g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/mypvz.dir/src/Math.cpp.obj -c C:/Users/Administrator/Desktop/project/pvz/src/Math.cpp
 
 CMakeFiles/mypvz.dir/src/Math.cpp.i: cmake_force
@@ -203,7 +217,7 @@ CMakeFiles/mypvz.dir/src/Math.cpp.s: cmake_force
 CMakeFiles/mypvz.dir/src/ResourceManager.cpp.obj: CMakeFiles/mypvz.dir/flags.make
 CMakeFiles/mypvz.dir/src/ResourceManager.cpp.obj: CMakeFiles/mypvz.dir/includes_CXX.rsp
 CMakeFiles/mypvz.dir/src/ResourceManager.cpp.obj: ../src/ResourceManager.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:/Users/Administrator/Desktop/project/pvz/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/mypvz.dir/src/ResourceManager.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:/Users/Administrator/Desktop/project/pvz/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/mypvz.dir/src/ResourceManager.cpp.obj"
 	g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/mypvz.dir/src/ResourceManager.cpp.obj -c C:/Users/Administrator/Desktop/project/pvz/src/ResourceManager.cpp
 
 CMakeFiles/mypvz.dir/src/ResourceManager.cpp.i: cmake_force
@@ -214,10 +228,24 @@ CMakeFiles/mypvz.dir/src/ResourceManager.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/mypvz.dir/src/ResourceManager.cpp.s"
 	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:/Users/Administrator/Desktop/project/pvz/src/ResourceManager.cpp -o CMakeFiles/mypvz.dir/src/ResourceManager.cpp.s
 
+CMakeFiles/mypvz.dir/src/RigidBody.cpp.obj: CMakeFiles/mypvz.dir/flags.make
+CMakeFiles/mypvz.dir/src/RigidBody.cpp.obj: CMakeFiles/mypvz.dir/includes_CXX.rsp
+CMakeFiles/mypvz.dir/src/RigidBody.cpp.obj: ../src/RigidBody.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:/Users/Administrator/Desktop/project/pvz/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/mypvz.dir/src/RigidBody.cpp.obj"
+	g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/mypvz.dir/src/RigidBody.cpp.obj -c C:/Users/Administrator/Desktop/project/pvz/src/RigidBody.cpp
+
+CMakeFiles/mypvz.dir/src/RigidBody.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/mypvz.dir/src/RigidBody.cpp.i"
+	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:/Users/Administrator/Desktop/project/pvz/src/RigidBody.cpp > CMakeFiles/mypvz.dir/src/RigidBody.cpp.i
+
+CMakeFiles/mypvz.dir/src/RigidBody.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/mypvz.dir/src/RigidBody.cpp.s"
+	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:/Users/Administrator/Desktop/project/pvz/src/RigidBody.cpp -o CMakeFiles/mypvz.dir/src/RigidBody.cpp.s
+
 CMakeFiles/mypvz.dir/src/SpriteRenderer.cpp.obj: CMakeFiles/mypvz.dir/flags.make
 CMakeFiles/mypvz.dir/src/SpriteRenderer.cpp.obj: CMakeFiles/mypvz.dir/includes_CXX.rsp
 CMakeFiles/mypvz.dir/src/SpriteRenderer.cpp.obj: ../src/SpriteRenderer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:/Users/Administrator/Desktop/project/pvz/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/mypvz.dir/src/SpriteRenderer.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:/Users/Administrator/Desktop/project/pvz/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/mypvz.dir/src/SpriteRenderer.cpp.obj"
 	g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/mypvz.dir/src/SpriteRenderer.cpp.obj -c C:/Users/Administrator/Desktop/project/pvz/src/SpriteRenderer.cpp
 
 CMakeFiles/mypvz.dir/src/SpriteRenderer.cpp.i: cmake_force
@@ -231,7 +259,7 @@ CMakeFiles/mypvz.dir/src/SpriteRenderer.cpp.s: cmake_force
 CMakeFiles/mypvz.dir/src/VisualInterface.cpp.obj: CMakeFiles/mypvz.dir/flags.make
 CMakeFiles/mypvz.dir/src/VisualInterface.cpp.obj: CMakeFiles/mypvz.dir/includes_CXX.rsp
 CMakeFiles/mypvz.dir/src/VisualInterface.cpp.obj: ../src/VisualInterface.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:/Users/Administrator/Desktop/project/pvz/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/mypvz.dir/src/VisualInterface.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:/Users/Administrator/Desktop/project/pvz/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/mypvz.dir/src/VisualInterface.cpp.obj"
 	g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/mypvz.dir/src/VisualInterface.cpp.obj -c C:/Users/Administrator/Desktop/project/pvz/src/VisualInterface.cpp
 
 CMakeFiles/mypvz.dir/src/VisualInterface.cpp.i: cmake_force
@@ -245,7 +273,7 @@ CMakeFiles/mypvz.dir/src/VisualInterface.cpp.s: cmake_force
 CMakeFiles/mypvz.dir/main.cpp.obj: CMakeFiles/mypvz.dir/flags.make
 CMakeFiles/mypvz.dir/main.cpp.obj: CMakeFiles/mypvz.dir/includes_CXX.rsp
 CMakeFiles/mypvz.dir/main.cpp.obj: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:/Users/Administrator/Desktop/project/pvz/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/mypvz.dir/main.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:/Users/Administrator/Desktop/project/pvz/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/mypvz.dir/main.cpp.obj"
 	g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/mypvz.dir/main.cpp.obj -c C:/Users/Administrator/Desktop/project/pvz/main.cpp
 
 CMakeFiles/mypvz.dir/main.cpp.i: cmake_force
@@ -262,12 +290,14 @@ mypvz_OBJECTS = \
 "CMakeFiles/mypvz.dir/src/BattleController.cpp.obj" \
 "CMakeFiles/mypvz.dir/src/BattleLevel.cpp.obj" \
 "CMakeFiles/mypvz.dir/src/Camera.cpp.obj" \
+"CMakeFiles/mypvz.dir/src/Collider.cpp.obj" \
 "CMakeFiles/mypvz.dir/src/Controller.cpp.obj" \
 "CMakeFiles/mypvz.dir/src/CoreMinimal.cpp.obj" \
 "CMakeFiles/mypvz.dir/src/GameStatics.cpp.obj" \
 "CMakeFiles/mypvz.dir/src/InputComponent.cpp.obj" \
 "CMakeFiles/mypvz.dir/src/Math.cpp.obj" \
 "CMakeFiles/mypvz.dir/src/ResourceManager.cpp.obj" \
+"CMakeFiles/mypvz.dir/src/RigidBody.cpp.obj" \
 "CMakeFiles/mypvz.dir/src/SpriteRenderer.cpp.obj" \
 "CMakeFiles/mypvz.dir/src/VisualInterface.cpp.obj" \
 "CMakeFiles/mypvz.dir/main.cpp.obj"
@@ -279,19 +309,21 @@ mypvz.exe: CMakeFiles/mypvz.dir/src/Animator.cpp.obj
 mypvz.exe: CMakeFiles/mypvz.dir/src/BattleController.cpp.obj
 mypvz.exe: CMakeFiles/mypvz.dir/src/BattleLevel.cpp.obj
 mypvz.exe: CMakeFiles/mypvz.dir/src/Camera.cpp.obj
+mypvz.exe: CMakeFiles/mypvz.dir/src/Collider.cpp.obj
 mypvz.exe: CMakeFiles/mypvz.dir/src/Controller.cpp.obj
 mypvz.exe: CMakeFiles/mypvz.dir/src/CoreMinimal.cpp.obj
 mypvz.exe: CMakeFiles/mypvz.dir/src/GameStatics.cpp.obj
 mypvz.exe: CMakeFiles/mypvz.dir/src/InputComponent.cpp.obj
 mypvz.exe: CMakeFiles/mypvz.dir/src/Math.cpp.obj
 mypvz.exe: CMakeFiles/mypvz.dir/src/ResourceManager.cpp.obj
+mypvz.exe: CMakeFiles/mypvz.dir/src/RigidBody.cpp.obj
 mypvz.exe: CMakeFiles/mypvz.dir/src/SpriteRenderer.cpp.obj
 mypvz.exe: CMakeFiles/mypvz.dir/src/VisualInterface.cpp.obj
 mypvz.exe: CMakeFiles/mypvz.dir/main.cpp.obj
 mypvz.exe: CMakeFiles/mypvz.dir/build.make
 mypvz.exe: CMakeFiles/mypvz.dir/linklibs.rsp
 mypvz.exe: CMakeFiles/mypvz.dir/objects1.rsp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:/Users/Administrator/Desktop/project/pvz/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Linking CXX executable mypvz.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:/Users/Administrator/Desktop/project/pvz/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Linking CXX executable mypvz.exe"
 	"C:/Program Files/cmake-3.17.0-rc3-win64-x64/bin/cmake.exe" -E rm -f CMakeFiles/mypvz.dir/objects.a
 	"C:/Program Files/mingw64/bin/ar.exe" cr CMakeFiles/mypvz.dir/objects.a @CMakeFiles/mypvz.dir/objects1.rsp
 	g++ -O3 -DNDEBUG   -Wl,--whole-archive CMakeFiles/mypvz.dir/objects.a -Wl,--no-whole-archive  -o mypvz.exe -Wl,--out-implib,libmypvz.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles/mypvz.dir/linklibs.rsp

@@ -4,6 +4,7 @@
 #include "./include/Math.h"
 #include "./easyx/graphics.h"
 #include "./include/ResourceManager.h"
+#include "../include/Macro.h"
 // #include "./include/Controller.h"
 
 
@@ -18,11 +19,6 @@
 #include "./include/BattleLevel.h"
 #include "./include/BattleController.h"
 #include "./include/GameStatics.h"
-
-
-extern const int WIN_WIDTH;
-extern const int WIN_HEIGHT;
-
 
 
 class Engine{

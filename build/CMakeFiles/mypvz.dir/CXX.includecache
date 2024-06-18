@@ -12,19 +12,31 @@ windows.h
 tchar.h
 -
 
-C:/Users/Administrator/Desktop/project/pvz/include/Animator.h
-CoreMinimal.h
-C:/Users/Administrator/Desktop/project/pvz/include/CoreMinimal.h
-../easyx/easyx.h
+C:/Users/Administrator/Desktop/project/pvz/easyx/graphics.h
+easyx.h
 C:/Users/Administrator/Desktop/project/pvz/easyx/easyx.h
+
+C:/Users/Administrator/Desktop/project/pvz/include/BattleController.h
+Controller.h
+C:/Users/Administrator/Desktop/project/pvz/include/Controller.h
 Timer.h
 C:/Users/Administrator/Desktop/project/pvz/include/Timer.h
-unordered_map
--
 
-C:/Users/Administrator/Desktop/project/pvz/include/BattleLevel.h
+C:/Users/Administrator/Desktop/project/pvz/include/Camera.h
 CoreMinimal.h
 C:/Users/Administrator/Desktop/project/pvz/include/CoreMinimal.h
+Collider.h
+C:/Users/Administrator/Desktop/project/pvz/include/Collider.h
+
+C:/Users/Administrator/Desktop/project/pvz/include/Collider.h
+CoreMinimal.h
+C:/Users/Administrator/Desktop/project/pvz/include/CoreMinimal.h
+
+C:/Users/Administrator/Desktop/project/pvz/include/Controller.h
+CoreMinimal.h
+C:/Users/Administrator/Desktop/project/pvz/include/CoreMinimal.h
+InputComponent.h
+C:/Users/Administrator/Desktop/project/pvz/include/InputComponent.h
 
 C:/Users/Administrator/Desktop/project/pvz/include/CoreMinimal.h
 cmath
@@ -40,21 +52,15 @@ stack
 unordered_set
 -
 
-C:/Users/Administrator/Desktop/project/pvz/include/GameStatics.h
+C:/Users/Administrator/Desktop/project/pvz/include/InputComponent.h
 CoreMinimal.h
 C:/Users/Administrator/Desktop/project/pvz/include/CoreMinimal.h
-
-C:/Users/Administrator/Desktop/project/pvz/include/SpriteRenderer.h
-CoreMinimal.h
-C:/Users/Administrator/Desktop/project/pvz/include/CoreMinimal.h
-VisualInterface.h
-C:/Users/Administrator/Desktop/project/pvz/include/VisualInterface.h
-
-C:/Users/Administrator/Desktop/project/pvz/include/Sun.h
-SpriteRenderer.h
-C:/Users/Administrator/Desktop/project/pvz/include/SpriteRenderer.h
-Animator.h
-C:/Users/Administrator/Desktop/project/pvz/include/Animator.h
+map
+-
+functional
+-
+utility
+-
 
 C:/Users/Administrator/Desktop/project/pvz/include/Timer.h
 CoreMinimal.h
@@ -64,19 +70,11 @@ functional
 chrono
 -
 
-C:/Users/Administrator/Desktop/project/pvz/include/VisualInterface.h
-windows.h
--
-string
--
-
-C:/Users/Administrator/Desktop/project/pvz/src/BattleLevel.cpp
-../include/BattleLevel.h
-C:/Users/Administrator/Desktop/project/pvz/include/BattleLevel.h
-../include/GameStatics.h
-C:/Users/Administrator/Desktop/project/pvz/include/GameStatics.h
-../include/SpriteRenderer.h
-C:/Users/Administrator/Desktop/project/pvz/include/SpriteRenderer.h
-../include/Sun.h
-C:/Users/Administrator/Desktop/project/pvz/include/Sun.h
+C:/Users/Administrator/Desktop/project/pvz/src/BattleController.cpp
+../include/BattleController.h
+C:/Users/Administrator/Desktop/project/pvz/include/BattleController.h
+../include/Camera.h
+C:/Users/Administrator/Desktop/project/pvz/include/Camera.h
+../easyx/Graphics.h
+C:/Users/Administrator/Desktop/project/pvz/easyx/graphics.h
 

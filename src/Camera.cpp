@@ -2,7 +2,6 @@
 #include "../include/Math.h"
 
 
-
 //设置平滑度
 void Camera::SetSmoothness(short smoothness){
     this->smoothness = Math::Clamp(smoothness, 0, 100);
@@ -10,8 +9,8 @@ void Camera::SetSmoothness(short smoothness){
 
 
 //设置距离阈值
-void Camera::SetDistanceTreshold(float distanceTreshold){
-    this->distanceTreshold =  Math::Clamp(distanceTreshold, 0.f, 500.f);
+void Camera::SetDistanceThreshold(float distanceThreshold){
+    this->distanceThreshold =  Math::Clamp(distanceThreshold, 0.f, 500.f);
 }
 
 
@@ -35,6 +34,7 @@ Vec2D Camera::Lerp(Vec2D start, Vec2D end, float t){
 }
 //插值函数(float)
 float Camera::Lerp(float start, float end, float t){
+    t = Math::Clamp(t, 0.001f, 0.1f);   //为了实现平滑
     return start + (end - start) * t;
 }
 
@@ -47,7 +47,7 @@ float Camera::SmoothStep(float x){
 
 //设置弹簧长度
 void Camera::SetSpringArmLength(float armLength){
-    springArmLength += armLength;
+    springArmLength = Math::Clamp(armLength, 1.f, 10000.f);
 }
 
 
@@ -87,7 +87,7 @@ void Camera::Calculate(){
     /*** 1.相机移动 ***/
     if(smoothness)   //平滑则平滑移动到实际位置
         virtual_transform.position = Lerp(virtual_transform.position,  GetWorldPosition(), 
-            0.1f /smoothness * SmoothStep(Vec2D::Distance(virtual_transform.position, GetWorldPosition())/distanceTreshold));
+            0.1f /smoothness * SmoothStep(Vec2D::Distance(virtual_transform.position, GetWorldPosition())/distanceThreshold));
   
     else    //不平滑则直接变为实际位置
         virtual_transform.position = GetWorldPosition();

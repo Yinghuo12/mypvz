@@ -21,6 +21,11 @@
 },
 {
   "directory": "C:/Users/Administrator/Desktop/project/pvz/build",
+  "command": "g++   @CMakeFiles/mypvz.dir/includes_CXX.rsp -O3 -DNDEBUG   -Wno-conversion-null -std=gnu++11 -o CMakeFiles/mypvz.dir/src/Collider.cpp.obj -c C:/Users/Administrator/Desktop/project/pvz/src/Collider.cpp",
+  "file": "C:/Users/Administrator/Desktop/project/pvz/src/Collider.cpp"
+},
+{
+  "directory": "C:/Users/Administrator/Desktop/project/pvz/build",
   "command": "g++   @CMakeFiles/mypvz.dir/includes_CXX.rsp -O3 -DNDEBUG   -Wno-conversion-null -std=gnu++11 -o CMakeFiles/mypvz.dir/src/Controller.cpp.obj -c C:/Users/Administrator/Desktop/project/pvz/src/Controller.cpp",
   "file": "C:/Users/Administrator/Desktop/project/pvz/src/Controller.cpp"
 },
@@ -48,6 +53,11 @@
   "directory": "C:/Users/Administrator/Desktop/project/pvz/build",
   "command": "g++   @CMakeFiles/mypvz.dir/includes_CXX.rsp -O3 -DNDEBUG   -Wno-conversion-null -std=gnu++11 -o CMakeFiles/mypvz.dir/src/ResourceManager.cpp.obj -c C:/Users/Administrator/Desktop/project/pvz/src/ResourceManager.cpp",
   "file": "C:/Users/Administrator/Desktop/project/pvz/src/ResourceManager.cpp"
+},
+{
+  "directory": "C:/Users/Administrator/Desktop/project/pvz/build",
+  "command": "g++   @CMakeFiles/mypvz.dir/includes_CXX.rsp -O3 -DNDEBUG   -Wno-conversion-null -std=gnu++11 -o CMakeFiles/mypvz.dir/src/RigidBody.cpp.obj -c C:/Users/Administrator/Desktop/project/pvz/src/RigidBody.cpp",
+  "file": "C:/Users/Administrator/Desktop/project/pvz/src/RigidBody.cpp"
 },
 {
   "directory": "C:/Users/Administrator/Desktop/project/pvz/build",

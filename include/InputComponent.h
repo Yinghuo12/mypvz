@@ -79,7 +79,7 @@ public:
     }
 
     //获取鼠标位置
-    Vec2D GetMousePostion();
+    Vec2D GetMousePosition();
 
     virtual void Update() override; 
 

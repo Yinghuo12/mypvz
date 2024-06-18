@@ -68,9 +68,9 @@ void BattleController::MoveLeft(){
 }
 
 void BattleController::ZoomIn(){
-    camera->SetSpringArmLength(-0.05f);
+    camera->SetSpringArmLength(camera->springArmLength - 0.05f);
 }
 
 void BattleController::ZoomOut(){
-    camera->SetSpringArmLength(0.05f);
+    camera->SetSpringArmLength(camera->springArmLength + 0.05f);
 }

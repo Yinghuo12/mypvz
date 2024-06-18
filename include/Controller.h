@@ -17,6 +17,12 @@ public:
     //与用户IO交互
     void PeekInfo();
 
+    //获取鼠标位置
+    Vec2D GetCursorPosition() const;
+
+    //获取鼠标下的物体
+    Object *GetObjectUnderCursor();
+
 protected:
     //绑定按键
     virtual void SetupInputComponent(InputComponent *inputcomponent);

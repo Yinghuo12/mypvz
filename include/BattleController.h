@@ -12,7 +12,7 @@ public:
     virtual void SetupInputComponent(InputComponent* inputComponent) override;
     
     /*下面这句不重写是因为要使用父类的BeginPlay()来执行SetupInputComponentInput(Component* inputComponent)
-        而inputcomponent是在父类Controller中私有的,子类无法访问，
+        而inputComponent是在父类Controller中私有的,子类无法访问，
         所以不能使用子类的BeginPlay()来执行SetupInputComponentInput(Component* inputComponent) */
     
     // virtual void BeginPlay() override;  

@@ -4,7 +4,9 @@
 #include "../include/Controller.h"
 #include "../include/Camera.h"
 #include "../easyx/graphics.h"
-
+#include "../include/Collider.h"
+#include "../include/Math.h"
+#include "../include/Macro.h"
 
 
 //全局World实例
@@ -24,6 +26,12 @@ Vec2D Vec2D::operator*(float rhs){
 }
 Vec2D Vec2D::operator/(float rhs){
     return Vec2D(x / rhs, y / rhs);
+}
+Vec2D Vec2D::operator*(const Vec2D& rhs){
+    return Vec2D(x * rhs.x, y * rhs.y);
+}
+Vec2D Vec2D::operator/(const Vec2D& rhs){
+    return Vec2D(x / rhs.x, y / rhs.y);
 }
 Vec2D Vec2D::operator-(){
     return Vec2D(-x, -y);
@@ -319,9 +327,9 @@ void Object::AddRotation(float rot) { this->root->AddRotation(rot); }
 
 
 //场景类
-void Level::Update(){
-
-}
+// void Level::Update(){
+    
+// }
 
 
 
@@ -329,8 +337,58 @@ void Level::Update(){
 //世界类
 /* 核心逻辑遍历 */
 void World::Update(){
-    //对Object的操作
-    for(auto &obj : game_objects)
+    /*对Collider的操作*/
+    //清除上一帧碰撞信息
+    for(auto& arr_i : ColliderZones){
+        for(auto& arr_j : arr_i){
+            arr_j.clear();
+        }
+    }
+    //对于上一帧发生碰撞的每一个碰撞体
+    for (auto it = game_colliders.begin(); it != game_colliders.end(); ++it){
+        (*it)->Clear();
+
+        Vec2D half;          //用于计算外接正方形
+        if((*it)->GetShape() == ColliderShape::Circle){
+            float a = Cast<CircleCollider>(*it)->GetRadius();
+            half = Vec2D(a, a);
+        }
+        else
+            half = Cast<BoxCollider>(*it)->GetSize() / 2;
+
+        Vec2D pos = (*it)->GetWorldPosition();
+        pos -= half;         //外接正方形的左上角
+        int x = (int)pos.x / 100;   x = Math::Clamp(x, 0, 7);      //横向只有8个格子
+        int y = (int)pos.y / 100;   y = Math::Clamp(y, 0, 5);      //纵向只有6个格子
+        pos += half * 2;     //外接正方形的右下角
+        int x_1 = (int)pos.x / 100;   x_1 = Math::Clamp(x_1, 0, 7);
+        int y_1 = (int)pos.y / 100;   y_1 = Math::Clamp(y_1, 0, 5);
+
+        //把碰撞体插入到网格中
+        for (int i = x; i <= x_1; ++i)
+            for (int j = y; j <= y_1; ++j)
+                ColliderZones[i][j].insert(*it);
+    }
+
+    //碰撞信息更新
+    for(auto& arr_i : ColliderZones){
+        for(auto& arr_j : arr_i){
+            if(!arr_j.empty()){
+                for (auto me = arr_j.begin(); me != arr_j.end(); ++me){
+                    for (auto he = arr_j.begin(); he != arr_j.end(); ++he){
+                        if(he != me){
+                            (*me)->Insert(*he);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+
+
+    /*对Object的操作*/
+    for (auto &obj : game_objects)
         obj->Update();
     for(auto &obj : game_objects_to_delete){
         game_objects.erase(obj);
@@ -338,7 +396,7 @@ void World::Update(){
     }
     game_objects_to_delete.clear();
 
-    //对UI的操作
+    /*对UI的操作*/
     for(auto& ui: game_UIs)
         ;
     for(auto &ui : game_UIs_to_delete){
@@ -347,20 +405,20 @@ void World::Update(){
     }
     game_objects_to_delete.clear();
 
-    //对计时器操作
+    /*对计时器操作*/
     for(auto& timer: game_timers)
         timer->Execute();
 
-    // current_level->Update();
+    /* 对场景的操作 */
+    current_level->Update();
 
 }
 
 
+
 void World::Update_(){
-
+    /* 对摄像机的操作 */
     mainCamera->Calculate();
-    // current_level->Update();
-
 }
 
 void World::Render(){
@@ -377,6 +435,11 @@ void World::Input(){
 
 
 void World::Debug(){
+    //碰撞体轮廓
+    for (auto& obj : game_colliders)
+        obj->DrawDebugLine();
+
+    //FPS显示
     static int FPS = 0;
     static int number = 0;
     number++;   //Debug在Render中执行，每渲染一帧就自增一次
@@ -390,10 +453,20 @@ void World::Debug(){
 }
 
 
-//图层比较器
+//渲染图层比较器
 bool LayerCmp::operator()(const class LayerInterface* a, const class LayerInterface *b) const{
     if (a->GetLayer() == b->GetLayer())
         return a < b;    //按图层指针地址大小排序
     else
         return a->GetLayer() < b->GetLayer();    //按照layer的大小排序
 }
+
+
+//碰撞图层比较器
+bool ColliderCmp::operator()(const class Collider *a, const class Collider *b) const{
+    if (a->GetLayer() == b->GetLayer())
+        return a < b;    //按图层指针地址大小排序
+    else
+        return a->GetLayer() < b->GetLayer();    //按照layer的大小排序
+}
+

@@ -18,6 +18,7 @@ void Animation::Load(std::string name,  POINT delta){
     AnimationResource aniRes = mainWorld.resourcePool->FetchAnimation(name);
     this->num = aniRes.num;
     this->images = aniRes.images;
+    offset = delta;
 }
 
 

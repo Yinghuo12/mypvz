@@ -275,6 +275,33 @@ src/Camera.cpp.s:
 	$(MAKE) -f CMakeFiles/mypvz.dir/build.make CMakeFiles/mypvz.dir/src/Camera.cpp.s
 .PHONY : src/Camera.cpp.s
 
+src/Collider.obj: src/Collider.cpp.obj
+
+.PHONY : src/Collider.obj
+
+# target to build an object file
+src/Collider.cpp.obj:
+	$(MAKE) -f CMakeFiles/mypvz.dir/build.make CMakeFiles/mypvz.dir/src/Collider.cpp.obj
+.PHONY : src/Collider.cpp.obj
+
+src/Collider.i: src/Collider.cpp.i
+
+.PHONY : src/Collider.i
+
+# target to preprocess a source file
+src/Collider.cpp.i:
+	$(MAKE) -f CMakeFiles/mypvz.dir/build.make CMakeFiles/mypvz.dir/src/Collider.cpp.i
+.PHONY : src/Collider.cpp.i
+
+src/Collider.s: src/Collider.cpp.s
+
+.PHONY : src/Collider.s
+
+# target to generate assembly for a file
+src/Collider.cpp.s:
+	$(MAKE) -f CMakeFiles/mypvz.dir/build.make CMakeFiles/mypvz.dir/src/Collider.cpp.s
+.PHONY : src/Collider.cpp.s
+
 src/Controller.obj: src/Controller.cpp.obj
 
 .PHONY : src/Controller.obj
@@ -437,6 +464,33 @@ src/ResourceManager.cpp.s:
 	$(MAKE) -f CMakeFiles/mypvz.dir/build.make CMakeFiles/mypvz.dir/src/ResourceManager.cpp.s
 .PHONY : src/ResourceManager.cpp.s
 
+src/RigidBody.obj: src/RigidBody.cpp.obj
+
+.PHONY : src/RigidBody.obj
+
+# target to build an object file
+src/RigidBody.cpp.obj:
+	$(MAKE) -f CMakeFiles/mypvz.dir/build.make CMakeFiles/mypvz.dir/src/RigidBody.cpp.obj
+.PHONY : src/RigidBody.cpp.obj
+
+src/RigidBody.i: src/RigidBody.cpp.i
+
+.PHONY : src/RigidBody.i
+
+# target to preprocess a source file
+src/RigidBody.cpp.i:
+	$(MAKE) -f CMakeFiles/mypvz.dir/build.make CMakeFiles/mypvz.dir/src/RigidBody.cpp.i
+.PHONY : src/RigidBody.cpp.i
+
+src/RigidBody.s: src/RigidBody.cpp.s
+
+.PHONY : src/RigidBody.s
+
+# target to generate assembly for a file
+src/RigidBody.cpp.s:
+	$(MAKE) -f CMakeFiles/mypvz.dir/build.make CMakeFiles/mypvz.dir/src/RigidBody.cpp.s
+.PHONY : src/RigidBody.cpp.s
+
 src/SpriteRenderer.obj: src/SpriteRenderer.cpp.obj
 
 .PHONY : src/SpriteRenderer.obj
@@ -515,6 +569,9 @@ help:
 	@echo "... src/Camera.obj"
 	@echo "... src/Camera.i"
 	@echo "... src/Camera.s"
+	@echo "... src/Collider.obj"
+	@echo "... src/Collider.i"
+	@echo "... src/Collider.s"
 	@echo "... src/Controller.obj"
 	@echo "... src/Controller.i"
 	@echo "... src/Controller.s"
@@ -533,6 +590,9 @@ help:
 	@echo "... src/ResourceManager.obj"
 	@echo "... src/ResourceManager.i"
 	@echo "... src/ResourceManager.s"
+	@echo "... src/RigidBody.obj"
+	@echo "... src/RigidBody.i"
+	@echo "... src/RigidBody.s"
 	@echo "... src/SpriteRenderer.obj"
 	@echo "... src/SpriteRenderer.i"
 	@echo "... src/SpriteRenderer.s"

@@ -1,6 +1,6 @@
 #include "../include/Controller.h"
 #include "../include/Camera.h"
-
+#include "../include/Math.h"
 
 Controller::Controller(){
     camera = ConstructComponent<Camera>();
@@ -25,6 +25,30 @@ void Controller::BeginPlay(){
 void Controller::PeekInfo() {
     inputcomponent->Update(); 
 }
+
+
+//获取鼠标位置
+Vec2D Controller::GetCursorPosition() const {
+    return inputcomponent->GetMousePosition();
+}
+
+
+//获取鼠标下的物体
+Object* Controller::GetObjectUnderCursor(){
+    Vec2D pos = inputcomponent->GetMousePosition();
+    int x = (int)(pos.x) / 100; x = Math::Clamp(x, 0, 7);
+    int y = (int)(pos.y) / 100; y = Math::Clamp(y, 0, 5);
+
+    if (!mainWorld.ColliderZones[x][y].empty()){
+        //因为ColliderZones容器按照图层顺序排序，我们倒着找位于图层最上方的物体
+        for(auto it = mainWorld.ColliderZones[x][y].rbegin(); it != mainWorld.ColliderZones[x][y].rend(); ++it){
+            if ((*it)->IsMouseOver())     //如果被鼠标选中
+                return (*it)->owner;        
+        }
+    }
+    return nullptr;
+}
+
 
 
 //这个是虚函数，不能放在构造函数中调用，因此放在BeginPlay函数中，创建对象后立即调用

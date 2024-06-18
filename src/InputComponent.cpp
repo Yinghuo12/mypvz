@@ -10,7 +10,7 @@ void InputComponent::SetMapping(std::string mappingName, int value){
 
 
 //获取鼠标位置
-Vec2D InputComponent::GetMousePostion(){
+Vec2D InputComponent::GetMousePosition(){
     return mousePos;
 }
 

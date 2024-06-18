@@ -2,14 +2,18 @@
 #define __CAMERA_H__
 
 #include "CoreMinimal.h"
+#include "Collider.h"
 
 class Camera: public SceneComponent{
     friend class SpriteRenderer;   //for SpriteRenderer::Render()
+    friend void CircleCollider::DrawDebugLine(); 
+    friend void BoxCollider::DrawDebugLine();
+    friend class BattleController;   //for ZoomIn/ZoomOut
 
 public:
  
     void SetSmoothness(short smoothness);                //设置平滑度
-    void SetDistanceTreshold(float distanceTreshold);    //设置距离阈值
+    void SetDistanceThreshold(float distanceThreshold);    //设置距离阈值
 
     //把世界中Camera的掌控权归给自己
     void SetMainCamera();
@@ -41,7 +45,7 @@ private:
     Transform virtual_transform;                 //虚拟相机位置
 
     /* 相机移动 */
-    float distanceTreshold = 50.f;               //距离阈值0-500（让相机与对象保持在这个距离左右）
+    float distanceThreshold = 50.f;               //距离阈值0-500（让相机与对象保持在这个距离左右）
     short smoothness = 50;                       //平滑度0-100
 
     /* 相机抖动*/
@@ -52,7 +56,7 @@ private:
     int shakeDecay = 5;                          //抖动衰减系数1-100
 
     /* 相机缩放 */
-    float springArmLength = 50.f;           //弹簧长度1—10000
+    float springArmLength = 20.f;           //弹簧长度1—10000
     float virtual_springArmLength = 100.f;  //虚拟弹簧长度
     float smoothnessForSpringArm = 20.f;    //弹簧平滑度
 

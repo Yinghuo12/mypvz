@@ -2,7 +2,7 @@
 #include "../easyx/graphics.h"
 #include "../easyx/easyx.h"
 #include "../include/Camera.h"
-
+#include "../include/Macro.h"
 
 void SpriteRenderer::Render(){
 
@@ -28,7 +28,7 @@ void SpriteRenderer::Render(){
         BLENDFUNCTION bf = {AC_SRC_OVER, 0, transprancy, AC_SRC_ALPHA};
         if (bFilterEnabled && filterInfo.filter){
             HDC srcDC_filter = GetImageHDC(filterInfo.filter);
-            AlphaBlend(dstDC, (int)pos.x - dw/2, (int)pos.y -dh/2, dw, dh, srcDC_filter, 0, 0, w, h, bf);
+            AlphaBlend(dstDC, (int)pos.x - (int)(dw/2), (int)pos.y - (int)(dh/2), dw, dh, srcDC_filter, 0, 0, w, h, bf);
         }
         else{
             AlphaBlend(dstDC, (int)pos.x - dw/2, (int)pos.y -dh/2, dw, dh, srcDC, 0, 0, w, h, bf);

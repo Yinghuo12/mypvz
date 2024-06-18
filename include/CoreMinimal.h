@@ -17,8 +17,7 @@
  **********************************************************/
 
 
-constexpr double PI = 3.14159265;
-constexpr double DELTA_TIME = 0.01;    //每一帧是0.01秒
+
 
 class World;
 extern World mainWorld;    //全局World实例
@@ -38,6 +37,8 @@ public:
     Vec2D operator-(const Vec2D& rhs);
     Vec2D operator*(float rhs);
     Vec2D operator/(float rhs);
+    Vec2D operator*(const Vec2D& rhs);
+    Vec2D operator/(const Vec2D& rhs);
 
     Vec2D operator-();
 
@@ -246,10 +247,16 @@ public:
 
 
 
-//图层比较器
+//渲染图层比较器
 struct LayerCmp{
     bool operator()(const class LayerInterface *a, const class LayerInterface *b) const;
 };
+
+//碰撞图层比较器
+struct ColliderCmp{
+    bool operator()(const class Collider *a, const class Collider *b) const;
+};
+
 
 
 //世界类
@@ -263,6 +270,12 @@ class World final{   //final表示它不能被继承
     friend class Camera;           //for SetMainCamera()
     friend class SpriteRenderer;     //for Render()
     friend class Animation;         //for Load()
+    
+    friend class Collider;          //for Collider()
+    friend class CircleCollider;    //for DrawDebugLine()
+    friend class BoxCollider;       //for DrawDebugLine()
+
+    friend class Controller;       //for BoxCollider/CircleCollider::IsMouseOver()里的GetCursorPosition()
 
     friend void Object::Destroy();
 
@@ -289,8 +302,8 @@ private:
 
     /* 渲染、碰撞计算容器 */
     std::set<class LayerInterface*, LayerCmp> game_renderers;  //图层渲染容器
-    std::unordered_set<class BoxCollider *> game_colliders;    //碰撞计算容器
-    // std::set<class Collider*, ColliderSort> ColliderZones[8][6];
+    std::unordered_set<class Collider *> game_colliders;    //碰撞计算容器
+    std::set<class Collider*, ColliderCmp> ColliderZones[8][6];  //碰撞区块
 
     /* 游戏单例对象 */
     Level *current_level = nullptr;               // 当前场景
@@ -318,6 +331,7 @@ template <typename T>
 inline T* Cast(Base * base){
     if(base) 
         return dynamic_cast<T*>(base);
+    std::cout << "Cast failed" << std::endl;
     return nullptr;
 }
 

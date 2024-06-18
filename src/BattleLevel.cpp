@@ -8,12 +8,14 @@ BattleLevel::BattleLevel()
 {
     background0 = GameStatics::CreateObject<StaticMesh>();
     background0->GetComponentByClass<SpriteRenderer>()->LoadSprite("bg0");
-    
+
     sunshine = GameStatics::CreateObject<Sun>();
     sunshine->SetLocalPosition(Vec2D(100, 100));
 }                                                                 
 
 void BattleLevel::Update(){
-    sunshine->AddRotation(0.1f);
+    // Error
+    // sunshine->AddRotation(0.1f);
+    sunshine->Update();
 }
 
