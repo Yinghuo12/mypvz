@@ -437,6 +437,33 @@ src/Math.cpp.s:
 	$(MAKE) -f CMakeFiles/mypvz.dir/build.make CMakeFiles/mypvz.dir/src/Math.cpp.s
 .PHONY : src/Math.cpp.s
 
+src/Particle.obj: src/Particle.cpp.obj
+
+.PHONY : src/Particle.obj
+
+# target to build an object file
+src/Particle.cpp.obj:
+	$(MAKE) -f CMakeFiles/mypvz.dir/build.make CMakeFiles/mypvz.dir/src/Particle.cpp.obj
+.PHONY : src/Particle.cpp.obj
+
+src/Particle.i: src/Particle.cpp.i
+
+.PHONY : src/Particle.i
+
+# target to preprocess a source file
+src/Particle.cpp.i:
+	$(MAKE) -f CMakeFiles/mypvz.dir/build.make CMakeFiles/mypvz.dir/src/Particle.cpp.i
+.PHONY : src/Particle.cpp.i
+
+src/Particle.s: src/Particle.cpp.s
+
+.PHONY : src/Particle.s
+
+# target to generate assembly for a file
+src/Particle.cpp.s:
+	$(MAKE) -f CMakeFiles/mypvz.dir/build.make CMakeFiles/mypvz.dir/src/Particle.cpp.s
+.PHONY : src/Particle.cpp.s
+
 src/ResourceManager.obj: src/ResourceManager.cpp.obj
 
 .PHONY : src/ResourceManager.obj
@@ -490,6 +517,33 @@ src/RigidBody.s: src/RigidBody.cpp.s
 src/RigidBody.cpp.s:
 	$(MAKE) -f CMakeFiles/mypvz.dir/build.make CMakeFiles/mypvz.dir/src/RigidBody.cpp.s
 .PHONY : src/RigidBody.cpp.s
+
+src/Sprite.obj: src/Sprite.cpp.obj
+
+.PHONY : src/Sprite.obj
+
+# target to build an object file
+src/Sprite.cpp.obj:
+	$(MAKE) -f CMakeFiles/mypvz.dir/build.make CMakeFiles/mypvz.dir/src/Sprite.cpp.obj
+.PHONY : src/Sprite.cpp.obj
+
+src/Sprite.i: src/Sprite.cpp.i
+
+.PHONY : src/Sprite.i
+
+# target to preprocess a source file
+src/Sprite.cpp.i:
+	$(MAKE) -f CMakeFiles/mypvz.dir/build.make CMakeFiles/mypvz.dir/src/Sprite.cpp.i
+.PHONY : src/Sprite.cpp.i
+
+src/Sprite.s: src/Sprite.cpp.s
+
+.PHONY : src/Sprite.s
+
+# target to generate assembly for a file
+src/Sprite.cpp.s:
+	$(MAKE) -f CMakeFiles/mypvz.dir/build.make CMakeFiles/mypvz.dir/src/Sprite.cpp.s
+.PHONY : src/Sprite.cpp.s
 
 src/SpriteRenderer.obj: src/SpriteRenderer.cpp.obj
 
@@ -587,12 +641,18 @@ help:
 	@echo "... src/Math.obj"
 	@echo "... src/Math.i"
 	@echo "... src/Math.s"
+	@echo "... src/Particle.obj"
+	@echo "... src/Particle.i"
+	@echo "... src/Particle.s"
 	@echo "... src/ResourceManager.obj"
 	@echo "... src/ResourceManager.i"
 	@echo "... src/ResourceManager.s"
 	@echo "... src/RigidBody.obj"
 	@echo "... src/RigidBody.i"
 	@echo "... src/RigidBody.s"
+	@echo "... src/Sprite.obj"
+	@echo "... src/Sprite.i"
+	@echo "... src/Sprite.s"
 	@echo "... src/SpriteRenderer.obj"
 	@echo "... src/SpriteRenderer.i"
 	@echo "... src/SpriteRenderer.s"

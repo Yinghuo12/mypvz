@@ -390,6 +390,10 @@ void World::Update(){
     /*对Object的操作*/
     for (auto &obj : game_objects)
         obj->Update();
+    for(auto &obj:gameobjects_to_add)
+        game_objects.insert(obj);
+    gameobjects_to_add.clear();
+    
     for(auto &obj : game_objects_to_delete){
         game_objects.erase(obj);
         delete obj;

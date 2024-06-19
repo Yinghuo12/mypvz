@@ -19,17 +19,5 @@ private:
 
 
 
-//静态网格
-class StaticMesh : public Object{
-
-public:
-    StaticMesh();
-    virtual void BeginPlay() override;
-
-private:
-    SpriteRenderer* renderer;      //渲染器
-    
-};
-
 
 #endif  //__SPRITE_RENDERER_H__

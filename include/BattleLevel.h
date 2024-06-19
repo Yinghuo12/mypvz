@@ -4,7 +4,7 @@
 #include "CoreMinimal.h"
 
 class Sun;
-class StaticMesh;
+class Sprite;
 
 class BattleLevel : public Level
 {
@@ -14,7 +14,7 @@ public:
     virtual void Update() override;
 
 private:
-    StaticMesh *background0;
+    Sprite *background0;
     Sun *sunshine;
 };
 

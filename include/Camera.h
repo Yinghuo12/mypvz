@@ -9,6 +9,7 @@ class Camera: public SceneComponent{
     friend void CircleCollider::DrawDebugLine(); 
     friend void BoxCollider::DrawDebugLine();
     friend class BattleController;   //for ZoomIn/ZoomOut
+    friend class Particle;           //for Particle::Render()
 
 public:
  
@@ -45,8 +46,8 @@ private:
     Transform virtual_transform;                 //虚拟相机位置
 
     /* 相机移动 */
-    float distanceThreshold = 50.f;               //距离阈值0-500（让相机与对象保持在这个距离左右）
-    short smoothness = 50;                       //平滑度0-100
+    float distanceThreshold = 100.f;               //距离阈值0-500（让相机与对象保持在这个距离左右）
+    short smoothness = 30;                       //平滑度0-100
 
     /* 相机抖动*/
     float shakeIntensity = 0.f;                   //相机抖动强度0-100

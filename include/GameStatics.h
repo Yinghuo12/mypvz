@@ -14,6 +14,7 @@ public:
         T* instance = new T;
         if(instance && static_cast<Object* >(instance)){    //如果T是Object或Object的子类
             mainWorld.game_objects.insert(instance);
+            mainWorld.gameobjects_to_add.push_back(instance);
             instance->BeginPlay();             //需要立马执行的逻辑
             instance->SetLocalPosition(pos);
             return instance;

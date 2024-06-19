@@ -1,16 +1,20 @@
 #include "../include/RigidBody.h"
 #include "../include/Macro.h"
+#include "../include/Math.h"
+
 
 void RigidBody::Update(){
     //是否可移动
     if(bMoveable){
-        owner->AddPosition(velocity);
+        //限定速度
+        owner->AddPosition(Vec2D(Math::Clamp(velocity.x, -maxSpeed, maxSpeed), 
+            Math::Clamp(velocity.y, -maxSpeed, maxSpeed) * DELTA_TIME));
         //是否启用重力
         if(bGravityEnabled)   velocity.y += gravity * DELTA_TIME;
     }
     //是否可旋转
     if(bRotatable){
-        owner->AddRotation(angular_velocity);
+        owner->AddRotation(angular_velocity* DELTA_TIME);
     }
 }
 
@@ -48,9 +52,20 @@ void RigidBody::SetAngularVelocity(float angularVelocity){
     angular_velocity = angularVelocity;
 }
 
-//添加作用力
+//设置质量
+void RigidBody::SetMass(float m){
+    mass = m;
+}          
+
+//添加持续作用力
 void RigidBody::AddForce(Vec2D force){
-    velocity += force * DELTA_TIME;
+    velocity += force * DELTA_TIME / mass;    //质量越大速度越小
+}
+
+//添加瞬时作用力
+void RigidBody::AddPulse(Vec2D pulse){
+    velocity += pulse / mass;    //质量越大速度越小
 }      
+
 
 

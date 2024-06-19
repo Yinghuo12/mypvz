@@ -51,6 +51,11 @@
 },
 {
   "directory": "C:/Users/Administrator/Desktop/project/pvz/build",
+  "command": "g++   @CMakeFiles/mypvz.dir/includes_CXX.rsp -O3 -DNDEBUG   -Wno-conversion-null -std=gnu++11 -o CMakeFiles/mypvz.dir/src/Particle.cpp.obj -c C:/Users/Administrator/Desktop/project/pvz/src/Particle.cpp",
+  "file": "C:/Users/Administrator/Desktop/project/pvz/src/Particle.cpp"
+},
+{
+  "directory": "C:/Users/Administrator/Desktop/project/pvz/build",
   "command": "g++   @CMakeFiles/mypvz.dir/includes_CXX.rsp -O3 -DNDEBUG   -Wno-conversion-null -std=gnu++11 -o CMakeFiles/mypvz.dir/src/ResourceManager.cpp.obj -c C:/Users/Administrator/Desktop/project/pvz/src/ResourceManager.cpp",
   "file": "C:/Users/Administrator/Desktop/project/pvz/src/ResourceManager.cpp"
 },
@@ -58,6 +63,11 @@
   "directory": "C:/Users/Administrator/Desktop/project/pvz/build",
   "command": "g++   @CMakeFiles/mypvz.dir/includes_CXX.rsp -O3 -DNDEBUG   -Wno-conversion-null -std=gnu++11 -o CMakeFiles/mypvz.dir/src/RigidBody.cpp.obj -c C:/Users/Administrator/Desktop/project/pvz/src/RigidBody.cpp",
   "file": "C:/Users/Administrator/Desktop/project/pvz/src/RigidBody.cpp"
+},
+{
+  "directory": "C:/Users/Administrator/Desktop/project/pvz/build",
+  "command": "g++   @CMakeFiles/mypvz.dir/includes_CXX.rsp -O3 -DNDEBUG   -Wno-conversion-null -std=gnu++11 -o CMakeFiles/mypvz.dir/src/Sprite.cpp.obj -c C:/Users/Administrator/Desktop/project/pvz/src/Sprite.cpp",
+  "file": "C:/Users/Administrator/Desktop/project/pvz/src/Sprite.cpp"
 },
 {
   "directory": "C:/Users/Administrator/Desktop/project/pvz/build",

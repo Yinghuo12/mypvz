@@ -5,7 +5,8 @@ void ResourceManager::Initialize(){
     Load("bg0", "../resource/images/bg0.jpg", 1400, 600);
     Load("bg1", "../resource/images/bg1.jpg", 1400, 600);
     Load("sunshine", "../resource/animations/bullets/sun.png", 483, 159, 12, 2, 6);
-
+    Load("normalwalk", "../resource/animations/zombies/normal/walk.png", 1000, 695, 46, 5, 10);
+    Load("mineparticle", "../resource/animations/effects/PotatoMine_particles.png", 138, 26, 6, 1, 6);
 }
 
 

@@ -18,7 +18,9 @@ public:
     void SetGravity(float g);          //设置重力加速度
     void SetVelocity(Vec2D v);         //设置速度
     void SetAngularVelocity(float angularVelocity);  //设置角速度
-    void AddForce(Vec2D force);        //添加作用力
+    void SetMass(float m);             //设置质量
+    void AddForce(Vec2D force);        //添加持续作用力
+    void AddPulse(Vec2D pulse);        //添加瞬时作用力
 
 private: 
     bool bMoveable = true;          //是否可移动
@@ -26,8 +28,11 @@ private:
     bool bRotatable = true;         //是否可旋转
 
     Vec2D velocity = Vec2D(0,0);     //速度
+    float maxSpeed = 1000.f;         //物体所能达到的最大速度
     float gravity = 9.81f;           //重力加速度
     float angular_velocity = 0.0f;   //角速度
+    float mass = 1.0f;               //质量
+
 
 
     

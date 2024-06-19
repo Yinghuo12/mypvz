@@ -15,8 +15,10 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "C:/Users/Administrator/Desktop/project/pvz/src/GameStatics.cpp" "C:/Users/Administrator/Desktop/project/pvz/build/CMakeFiles/mypvz.dir/src/GameStatics.cpp.obj"
   "C:/Users/Administrator/Desktop/project/pvz/src/InputComponent.cpp" "C:/Users/Administrator/Desktop/project/pvz/build/CMakeFiles/mypvz.dir/src/InputComponent.cpp.obj"
   "C:/Users/Administrator/Desktop/project/pvz/src/Math.cpp" "C:/Users/Administrator/Desktop/project/pvz/build/CMakeFiles/mypvz.dir/src/Math.cpp.obj"
+  "C:/Users/Administrator/Desktop/project/pvz/src/Particle.cpp" "C:/Users/Administrator/Desktop/project/pvz/build/CMakeFiles/mypvz.dir/src/Particle.cpp.obj"
   "C:/Users/Administrator/Desktop/project/pvz/src/ResourceManager.cpp" "C:/Users/Administrator/Desktop/project/pvz/build/CMakeFiles/mypvz.dir/src/ResourceManager.cpp.obj"
   "C:/Users/Administrator/Desktop/project/pvz/src/RigidBody.cpp" "C:/Users/Administrator/Desktop/project/pvz/build/CMakeFiles/mypvz.dir/src/RigidBody.cpp.obj"
+  "C:/Users/Administrator/Desktop/project/pvz/src/Sprite.cpp" "C:/Users/Administrator/Desktop/project/pvz/build/CMakeFiles/mypvz.dir/src/Sprite.cpp.obj"
   "C:/Users/Administrator/Desktop/project/pvz/src/SpriteRenderer.cpp" "C:/Users/Administrator/Desktop/project/pvz/build/CMakeFiles/mypvz.dir/src/SpriteRenderer.cpp.obj"
   "C:/Users/Administrator/Desktop/project/pvz/src/VisualInterface.cpp" "C:/Users/Administrator/Desktop/project/pvz/build/CMakeFiles/mypvz.dir/src/VisualInterface.cpp.obj"
   )

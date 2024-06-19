@@ -274,8 +274,8 @@ class World final{   //final表示它不能被继承
     friend class Collider;          //for Collider()
     friend class CircleCollider;    //for DrawDebugLine()
     friend class BoxCollider;       //for DrawDebugLine()
-
     friend class Controller;       //for BoxCollider/CircleCollider::IsMouseOver()里的GetCursorPosition()
+    friend class Particle;         //for Load()
 
     friend void Object::Destroy();
 
@@ -292,6 +292,7 @@ private:
 private:
     /* 场景对象、UI、计时器容器 */
     std::unordered_set<Object *> game_objects;
+    std::vector<Object *> gameobjects_to_add;
     std::unordered_set<class UserInterface *> game_UIs;
     std::unordered_set<class Timer *> game_timers;
 

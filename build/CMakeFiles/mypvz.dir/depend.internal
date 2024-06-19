@@ -46,7 +46,9 @@ CMakeFiles/mypvz.dir/src/BattleLevel.cpp.obj
  C:/Users/Administrator/Desktop/project/pvz/include/Collider.h
  C:/Users/Administrator/Desktop/project/pvz/include/CoreMinimal.h
  C:/Users/Administrator/Desktop/project/pvz/include/GameStatics.h
+ C:/Users/Administrator/Desktop/project/pvz/include/Particle.h
  C:/Users/Administrator/Desktop/project/pvz/include/RigidBody.h
+ C:/Users/Administrator/Desktop/project/pvz/include/Sprite.h
  C:/Users/Administrator/Desktop/project/pvz/include/SpriteRenderer.h
  C:/Users/Administrator/Desktop/project/pvz/include/Sun.h
  C:/Users/Administrator/Desktop/project/pvz/include/Timer.h
@@ -99,6 +101,17 @@ CMakeFiles/mypvz.dir/src/InputComponent.cpp.obj
 CMakeFiles/mypvz.dir/src/Math.cpp.obj
  C:/Users/Administrator/Desktop/project/pvz/include/Math.h
  C:/Users/Administrator/Desktop/project/pvz/src/Math.cpp
+CMakeFiles/mypvz.dir/src/Particle.cpp.obj
+ C:/Users/Administrator/Desktop/project/pvz/easyx/easyx.h
+ C:/Users/Administrator/Desktop/project/pvz/include/Camera.h
+ C:/Users/Administrator/Desktop/project/pvz/include/Collider.h
+ C:/Users/Administrator/Desktop/project/pvz/include/CoreMinimal.h
+ C:/Users/Administrator/Desktop/project/pvz/include/Macro.h
+ C:/Users/Administrator/Desktop/project/pvz/include/Math.h
+ C:/Users/Administrator/Desktop/project/pvz/include/Particle.h
+ C:/Users/Administrator/Desktop/project/pvz/include/ResourceManager.h
+ C:/Users/Administrator/Desktop/project/pvz/include/VisualInterface.h
+ C:/Users/Administrator/Desktop/project/pvz/src/Particle.cpp
 CMakeFiles/mypvz.dir/src/ResourceManager.cpp.obj
  C:/Users/Administrator/Desktop/project/pvz/easyx/easyx.h
  C:/Users/Administrator/Desktop/project/pvz/include/ResourceManager.h
@@ -106,8 +119,18 @@ CMakeFiles/mypvz.dir/src/ResourceManager.cpp.obj
 CMakeFiles/mypvz.dir/src/RigidBody.cpp.obj
  C:/Users/Administrator/Desktop/project/pvz/include/CoreMinimal.h
  C:/Users/Administrator/Desktop/project/pvz/include/Macro.h
+ C:/Users/Administrator/Desktop/project/pvz/include/Math.h
  C:/Users/Administrator/Desktop/project/pvz/include/RigidBody.h
  C:/Users/Administrator/Desktop/project/pvz/src/RigidBody.cpp
+CMakeFiles/mypvz.dir/src/Sprite.cpp.obj
+ C:/Users/Administrator/Desktop/project/pvz/include/CoreMinimal.h
+ C:/Users/Administrator/Desktop/project/pvz/include/Macro.h
+ C:/Users/Administrator/Desktop/project/pvz/include/Math.h
+ C:/Users/Administrator/Desktop/project/pvz/include/Sprite.h
+ C:/Users/Administrator/Desktop/project/pvz/include/SpriteRenderer.h
+ C:/Users/Administrator/Desktop/project/pvz/include/Timer.h
+ C:/Users/Administrator/Desktop/project/pvz/include/VisualInterface.h
+ C:/Users/Administrator/Desktop/project/pvz/src/Sprite.cpp
 CMakeFiles/mypvz.dir/src/SpriteRenderer.cpp.obj
  C:/Users/Administrator/Desktop/project/pvz/easyx/easyx.h
  C:/Users/Administrator/Desktop/project/pvz/easyx/graphics.h

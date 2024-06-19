@@ -29,19 +29,48 @@ int LayerInterface::GetLayer() const {
 
 
 //获取透明度
-BYTE ImageInterface::GetTransprancy()const{
-    return transprancy;
+BYTE ImageInterface::GetTransparency()const{
+    return transparency;
 }
 
 //设置透明度
-void ImageInterface::SetTransprancy(BYTE transprancy){
-    this->transprancy = transprancy;
+void ImageInterface::SetTransparency(BYTE transparency){
+    this->transparency = transparency;
 }
 
 //加载非动画资源
 void ImageInterface::LoadSprite(std::string name){
     sprite = mainWorld.resourcePool->FetchImage(name);
 }
+
+
+
+//设置滤镜
+void ImageInterface::SetFilter(bool enabled, COLORREF col, int level){
+    //若enabled = false，则把第零层滤镜移除
+    //若enabled = true, 则第零层滤镜移除后，给第零层添加回一个新的滤镜
+    filterLayers.erase(FilterInfo{col, level});
+    if(enabled){
+        level = Math::Clamp(level, 0, 100);
+        filterLayers.insert(FilterInfo{col, level});
+    }
+}
+
+
+
+//添加滤镜
+void ImageInterface::AddFilter(FilterInfo filterInfo){
+    filterLayers.insert(filterInfo);
+}
+
+//移除滤镜
+void ImageInterface::RemoveFilter(){
+    //把第一层的滤镜移除
+    filterLayers.erase(FilterInfo{0x00000000, 60, 1});  //前两个参数随意传，最后一个是第1层
+}
+
+
+
 
 
 //旋转图像
@@ -93,40 +122,43 @@ void ImageInterface::RotateImage(double rad){
 
 
 
-//设置滤镜
-void ImageInterface::SetFilter(bool enabled, COLORREF col, int level){
-    level = Math::Clamp(level, 0, 10);
-    bFilterEnabled = enabled;
-    filterInfo.color = col;
-    filterInfo.level = level;
-}
 
-
-//添加滤镜
+//滤镜图像
 void ImageInterface::FilterImage(){
     IMAGE *img = copy ? copy : sprite;
-    if(!filterInfo.filter){
-        filterInfo.filter = new IMAGE(img->getwidth(), img->getheight());
+    if(!filter){
+        filter = new IMAGE(img->getwidth(), img->getheight());
     }
-    filterInfo.filter->Resize(img->getwidth(), img->getheight());
+    filter->Resize(img->getwidth(), img->getheight());
 
     const DWORD* src_buffer = GetImageBuffer(img);
-    DWORD *dst_buffer = GetImageBuffer(filterInfo.filter);
+    DWORD *dst_buffer = GetImageBuffer(filter);
     int num = img->getheight() * img->getwidth();
 
     for(int i = 0; i < num; ++i){
-        //获取BGR
-        int dst_bufferB = src_buffer[i] & 0xFF;
-        int dst_bufferG = (src_buffer[i] & 0xFF00) >> 8;
-        int dst_bufferR = (src_buffer[i] & 0xFF0000) >> 16;
+        if(src_buffer[i] >> 24){   //有透明度即存在像素
+            //获取BGR
+            DWORD dst_bufferB = src_buffer[i] & 0xFF;
+            DWORD dst_bufferG = (src_buffer[i] & 0xFF00) >> 8;
+            DWORD dst_bufferR = (src_buffer[i] & 0xFF0000) >> 16;
 
-        //将颜色进行平均化(level越小滤镜效果越差)
-        dst_bufferB = (dst_bufferB * (10-filterInfo.level) + GetBValue(filterInfo.color) * filterInfo.level) / 10;
-        dst_bufferG = (dst_bufferG * (10-filterInfo.level) + GetGValue(filterInfo.color) * filterInfo.level) / 10;
-        dst_bufferR = (dst_bufferR * (10-filterInfo.level) + GetRValue(filterInfo.color) * filterInfo.level) / 10;
+            for(auto &filterInfo: filterLayers){
+                int level = filterInfo.level;
+                if(src_buffer[i] >> 24 < 250){
+                    //使得颜色滤镜从低透明度到高透明度的平滑过渡
+                    level = (src_buffer[i] >> 24) * level >> 8;  
+                }
+                //将颜色进行平均化(level越小滤镜效果越差)
+                dst_bufferB = (dst_bufferB * (128-level) + GetBValue(filterInfo.color) * level) >> 7;
+                dst_bufferG = (dst_bufferG * (128-level) + GetBValue(filterInfo.color) * level) >> 7;
+                dst_bufferR = (dst_bufferR * (128-level) + GetBValue(filterInfo.color) * level) >> 7;
+            }
+            
 
-        //重新组合成一个新的颜色值BGR
-        dst_buffer[i] = (src_buffer[i] & 0xFF000000) | (dst_bufferR << 16) | (dst_bufferG << 8) | dst_bufferB;
+            //重新组合成一个新的颜色值BGR
+            dst_buffer[i] = (src_buffer[i] & 0xFF000000) | (dst_bufferR << 16) | (dst_bufferG << 8) | dst_bufferB;
+        }
+        else  dst_buffer[i] = 0;
     }
 }
 
@@ -139,8 +171,8 @@ ImageInterface::~ImageInterface(){
         delete copy;
         copy = nullptr;
     }
-    if(filterInfo.filter){
-        delete filterInfo.filter;
-        filterInfo.filter = nullptr;
+    if(filter){
+        delete filter;
+        filter = nullptr;
     }  
 }

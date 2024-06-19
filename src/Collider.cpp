@@ -82,12 +82,14 @@ CircleCollider::CircleCollider(){
 }
 
 void CircleCollider::Update(){
+    Collider::Update();
     radius = radius_ini * sqrtf(GetWorldScale().x * GetWorldScale().y);
 }
 
 //绘制碰撞体轮廓
 void CircleCollider::DrawDebugLine(){
-    Vec2D pos = (GetWorldPosition() - mainWorld.mainCamera->virtual_transform.position)*20.f / mainWorld.mainCamera->virtual_springArmLength + Vec2D(WIN_WIDTH / 2, WIN_HEIGHT / 2);
+    Vec2D pos = (GetWorldPosition() - mainWorld.mainCamera->virtual_transform.position)*20.f / mainWorld.mainCamera->virtual_springArmLength
+         + Vec2D(WIN_WIDTH / 2, WIN_HEIGHT / 2);
     circle((int)pos.x, (int)pos.y, int(radius * 20.f / mainWorld.mainCamera->virtual_springArmLength));       //easyx绘图函数
 }
 
@@ -157,12 +159,14 @@ BoxCollider::BoxCollider(){
 
 
 void BoxCollider::Update(){
+    Collider::Update();
     size = size_ini * GetWorldScale();
 }
 
 //绘制碰撞体轮廓
 void BoxCollider::DrawDebugLine(){
-    Vec2D pos = (GetWorldPosition() - mainWorld.mainCamera->virtual_transform.position)*20.f / mainWorld.mainCamera->virtual_springArmLength + Vec2D(WIN_WIDTH / 2, WIN_HEIGHT / 2);
+    Vec2D pos = (GetWorldPosition() - mainWorld.mainCamera->virtual_transform.position)*20.f / mainWorld.mainCamera->virtual_springArmLength 
+        + Vec2D(WIN_WIDTH / 2, WIN_HEIGHT / 2);
     Vec2D current_size = this->size * 20.f / mainWorld.mainCamera->virtual_springArmLength;
     float left = pos.x - current_size.x / 2, right = pos.x + current_size.x / 2,  
           top = pos.y + current_size.y / 2, bottom = pos.y - current_size.y / 2;    

@@ -45,7 +45,9 @@ CMakeFiles/mypvz.dir/src/BattleLevel.cpp.obj: ../include/BattleLevel.h
 CMakeFiles/mypvz.dir/src/BattleLevel.cpp.obj: ../include/Collider.h
 CMakeFiles/mypvz.dir/src/BattleLevel.cpp.obj: ../include/CoreMinimal.h
 CMakeFiles/mypvz.dir/src/BattleLevel.cpp.obj: ../include/GameStatics.h
+CMakeFiles/mypvz.dir/src/BattleLevel.cpp.obj: ../include/Particle.h
 CMakeFiles/mypvz.dir/src/BattleLevel.cpp.obj: ../include/RigidBody.h
+CMakeFiles/mypvz.dir/src/BattleLevel.cpp.obj: ../include/Sprite.h
 CMakeFiles/mypvz.dir/src/BattleLevel.cpp.obj: ../include/SpriteRenderer.h
 CMakeFiles/mypvz.dir/src/BattleLevel.cpp.obj: ../include/Sun.h
 CMakeFiles/mypvz.dir/src/BattleLevel.cpp.obj: ../include/Timer.h
@@ -99,14 +101,35 @@ CMakeFiles/mypvz.dir/src/InputComponent.cpp.obj: ../src/InputComponent.cpp
 CMakeFiles/mypvz.dir/src/Math.cpp.obj: ../include/Math.h
 CMakeFiles/mypvz.dir/src/Math.cpp.obj: ../src/Math.cpp
 
+CMakeFiles/mypvz.dir/src/Particle.cpp.obj: ../easyx/easyx.h
+CMakeFiles/mypvz.dir/src/Particle.cpp.obj: ../include/Camera.h
+CMakeFiles/mypvz.dir/src/Particle.cpp.obj: ../include/Collider.h
+CMakeFiles/mypvz.dir/src/Particle.cpp.obj: ../include/CoreMinimal.h
+CMakeFiles/mypvz.dir/src/Particle.cpp.obj: ../include/Macro.h
+CMakeFiles/mypvz.dir/src/Particle.cpp.obj: ../include/Math.h
+CMakeFiles/mypvz.dir/src/Particle.cpp.obj: ../include/Particle.h
+CMakeFiles/mypvz.dir/src/Particle.cpp.obj: ../include/ResourceManager.h
+CMakeFiles/mypvz.dir/src/Particle.cpp.obj: ../include/VisualInterface.h
+CMakeFiles/mypvz.dir/src/Particle.cpp.obj: ../src/Particle.cpp
+
 CMakeFiles/mypvz.dir/src/ResourceManager.cpp.obj: ../easyx/easyx.h
 CMakeFiles/mypvz.dir/src/ResourceManager.cpp.obj: ../include/ResourceManager.h
 CMakeFiles/mypvz.dir/src/ResourceManager.cpp.obj: ../src/ResourceManager.cpp
 
 CMakeFiles/mypvz.dir/src/RigidBody.cpp.obj: ../include/CoreMinimal.h
 CMakeFiles/mypvz.dir/src/RigidBody.cpp.obj: ../include/Macro.h
+CMakeFiles/mypvz.dir/src/RigidBody.cpp.obj: ../include/Math.h
 CMakeFiles/mypvz.dir/src/RigidBody.cpp.obj: ../include/RigidBody.h
 CMakeFiles/mypvz.dir/src/RigidBody.cpp.obj: ../src/RigidBody.cpp
+
+CMakeFiles/mypvz.dir/src/Sprite.cpp.obj: ../include/CoreMinimal.h
+CMakeFiles/mypvz.dir/src/Sprite.cpp.obj: ../include/Macro.h
+CMakeFiles/mypvz.dir/src/Sprite.cpp.obj: ../include/Math.h
+CMakeFiles/mypvz.dir/src/Sprite.cpp.obj: ../include/Sprite.h
+CMakeFiles/mypvz.dir/src/Sprite.cpp.obj: ../include/SpriteRenderer.h
+CMakeFiles/mypvz.dir/src/Sprite.cpp.obj: ../include/Timer.h
+CMakeFiles/mypvz.dir/src/Sprite.cpp.obj: ../include/VisualInterface.h
+CMakeFiles/mypvz.dir/src/Sprite.cpp.obj: ../src/Sprite.cpp
 
 CMakeFiles/mypvz.dir/src/SpriteRenderer.cpp.obj: ../easyx/easyx.h
 CMakeFiles/mypvz.dir/src/SpriteRenderer.cpp.obj: ../easyx/graphics.h
