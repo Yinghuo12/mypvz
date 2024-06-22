@@ -10,6 +10,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "C:/Users/Administrator/Desktop/project/pvz/src/BattleLevel.cpp" "C:/Users/Administrator/Desktop/project/pvz/build/CMakeFiles/mypvz.dir/src/BattleLevel.cpp.obj"
   "C:/Users/Administrator/Desktop/project/pvz/src/Camera.cpp" "C:/Users/Administrator/Desktop/project/pvz/build/CMakeFiles/mypvz.dir/src/Camera.cpp.obj"
   "C:/Users/Administrator/Desktop/project/pvz/src/Collider.cpp" "C:/Users/Administrator/Desktop/project/pvz/build/CMakeFiles/mypvz.dir/src/Collider.cpp.obj"
+  "C:/Users/Administrator/Desktop/project/pvz/src/CollisionManager.cpp" "C:/Users/Administrator/Desktop/project/pvz/build/CMakeFiles/mypvz.dir/src/CollisionManager.cpp.obj"
   "C:/Users/Administrator/Desktop/project/pvz/src/Controller.cpp" "C:/Users/Administrator/Desktop/project/pvz/build/CMakeFiles/mypvz.dir/src/Controller.cpp.obj"
   "C:/Users/Administrator/Desktop/project/pvz/src/CoreMinimal.cpp" "C:/Users/Administrator/Desktop/project/pvz/build/CMakeFiles/mypvz.dir/src/CoreMinimal.cpp.obj"
   "C:/Users/Administrator/Desktop/project/pvz/src/GameStatics.cpp" "C:/Users/Administrator/Desktop/project/pvz/build/CMakeFiles/mypvz.dir/src/GameStatics.cpp.obj"

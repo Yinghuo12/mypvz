@@ -66,6 +66,13 @@ std::ostream& operator<<(std::ostream & cout, const Vec2D &vec){
     cout << "(" << vec.x << "," << vec.y << ")";
     return cout;
 }
+
+
+std::string Vec2D::ToString() const{
+    return "(" + std::to_string((int)x) + "," + std::to_string((int)y) + ")";
+}
+
+
 /*二维向量*  end*/
 
 
@@ -320,6 +327,13 @@ void Object::SetLocalScale(const Vec2D &scale) { this->root->SetLocalScale(scale
 void Object::AddPosition(const Vec2D &pos) { this->root->AddPosition(pos); }
 void Object::AddRotation(float rot) { this->root->AddRotation(rot); }
 
+//物体位置Debug
+void Object::DrawDebugPosition(){
+    Vec2D pos = (GetWorldPosition() - mainWorld.mainCamera->virtual_transform.position)
+        *20.f / mainWorld.mainCamera->virtual_springArmLength + Vec2D(WIN_WIDTH / 2, WIN_HEIGHT / 2);
+    outtextxy((int)pos.x, (int)pos.y, GetWorldPosition().ToString().c_str());
+}
+
 /*组件管理器组件  end*/
 
 
@@ -338,54 +352,7 @@ void Object::AddRotation(float rot) { this->root->AddRotation(rot); }
 /* 核心逻辑遍历 */
 void World::Update(){
     /*对Collider的操作*/
-    //清除上一帧碰撞信息
-    for(auto& arr_i : ColliderZones){
-        for(auto& arr_j : arr_i){
-            arr_j.clear();
-        }
-    }
-    //对于上一帧发生碰撞的每一个碰撞体
-    for (auto it = game_colliders.begin(); it != game_colliders.end(); ++it){
-        (*it)->Clear();
-
-        Vec2D half;          //用于计算外接正方形
-        if((*it)->GetShape() == ColliderShape::Circle){
-            float a = Cast<CircleCollider>(*it)->GetRadius();
-            half = Vec2D(a, a);
-        }
-        else
-            half = Cast<BoxCollider>(*it)->GetSize() / 2;
-
-        Vec2D pos = (*it)->GetWorldPosition();
-        pos -= half;         //外接正方形的左上角
-        int x = (int)pos.x / 100;   x = Math::Clamp(x, 0, 7);      //横向只有8个格子
-        int y = (int)pos.y / 100;   y = Math::Clamp(y, 0, 5);      //纵向只有6个格子
-        pos += half * 2;     //外接正方形的右下角
-        int x_1 = (int)pos.x / 100;   x_1 = Math::Clamp(x_1, 0, 7);
-        int y_1 = (int)pos.y / 100;   y_1 = Math::Clamp(y_1, 0, 5);
-
-        //把碰撞体插入到网格中
-        for (int i = x; i <= x_1; ++i)
-            for (int j = y; j <= y_1; ++j)
-                ColliderZones[i][j].insert(*it);
-    }
-
-    //碰撞信息更新
-    for(auto& arr_i : ColliderZones){
-        for(auto& arr_j : arr_i){
-            if(!arr_j.empty()){
-                for (auto me = arr_j.begin(); me != arr_j.end(); ++me){
-                    for (auto he = arr_j.begin(); he != arr_j.end(); ++he){
-                        if(he != me){
-                            (*me)->Insert(*he);
-                        }
-                    }
-                }
-            }
-        }
-    }
-    
-
+    ProcessColliderZones();
 
     /*对Object的操作*/
     for (auto &obj : game_objects)
@@ -437,11 +404,71 @@ void World::Input(){
     mainController->PeekInfo();
 }
 
+void World::ProcessColliderZones(){
+    //清除上一帧碰撞信息
+    for(auto& arr_i : ColliderZones){
+        for(auto& arr_j : arr_i){
+            arr_j.clear();
+        }
+    }
+    //对于上一帧发生碰撞的每一个碰撞体
+    for (auto &it : game_colliders){
+        //跳过判断以优化性能
+        if(it->GetCollisionMode() == CollisionMode::None)
+            continue;
+
+        Vec2D half;          //用于计算外接正方形
+        if(it->GetShape() == ColliderShape::Circle){
+            float a = Cast<CircleCollider>(it)->GetRadius();
+            half = Vec2D(a, a);
+        }
+        else
+            half = Cast<BoxCollider>(it)->GetSize() / 2;
+
+        Vec2D pos = it->GetWorldPosition();
+        pos -= half;         //外接正方形的左上角
+        int x = (int)pos.x / 100;   x = Math::Clamp(x, 0, 7);      //横向只有8个格子
+        int y = (int)pos.y / 100;   y = Math::Clamp(y, 0, 5);      //纵向只有6个格子
+        pos += half * 2;     //外接正方形的右下角
+        int x_1 = (int)pos.x / 100;   x_1 = Math::Clamp(x_1, 0, 7);
+        int y_1 = (int)pos.y / 100;   y_1 = Math::Clamp(y_1, 0, 5);
+
+        //把碰撞体插入到网格中
+        for (int i = x; i <= x_1; ++i)
+            for (int j = y; j <= y_1; ++j)
+                ColliderZones[i][j].insert(it);
+    }
+
+    //碰撞信息更新
+    for(auto& arr_i : ColliderZones){
+        for(auto& arr_j : arr_i){
+            if(!arr_j.empty()){
+                for (auto me = arr_j.begin(); me != arr_j.end(); ++me){
+                    for (auto he = arr_j.begin(); he != arr_j.end(); ++he){
+                        if(he != me){
+                            (*me)->Insert(*he);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // //碰撞删除信息更新
+    // for(auto & it: game_colliders){
+    //     it->Erase();
+    // }
+}
+
 
 void World::Debug(){
     //碰撞体轮廓
     for (auto& obj : game_colliders)
         obj->DrawDebugLine();
+    
+    //物体位置显示
+    for (auto& obj : game_objects)
+        obj->DrawDebugPosition();
 
     //FPS显示
     static int FPS = 0;

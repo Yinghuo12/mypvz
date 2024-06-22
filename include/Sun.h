@@ -8,12 +8,11 @@
 #include "Timer.h"
 #include "Particle.h"
 
-
 class Sun:public Sprite{
 public:
     Sun(){
         
-        /**** renderer ****/
+        //渲染
         SpriteRenderer * renderer = GetComponentByClass<SpriteRenderer>();
         renderer->SetLayer(10);
         // renderer->SetFilter(true, 0x00FF0000);   //蓝色滤镜Error?
@@ -21,7 +20,7 @@ public:
         // renderer->SetFilter(true);
 
 
-        /**** animator && animation ****/
+        //动画
         animator = ConstructComponent<Animator>();
 
         animation.Load("sunshine");      //加载动画
@@ -31,26 +30,32 @@ public:
         animator->SetNode("idle");
         // animator->SetCalled(false);   //不播放动画
 
-
-        /**** collider ****/
-        // collider = ConstructComponent<CircleCollider>();
-        // collider->AttachTo(root);
-        // collider->SetRadius(35);
+        // 碰撞
+         collider = ConstructComponent<CircleCollider>();
+         collider->AttachTo(root);
+         collider->SetRadius(35);
+         collider->SetCollisionMode(CollisionMode::Trigger);
+         collider->SetType("Sunshine");
 
         // collider_ = ConstructComponent<BoxCollider>();
         // collider_->AttachTo(root);
         // collider_->SetSize(Vec2D(70,70));
 
-        /**** rigidBody ****/
+        //碰撞与结束碰撞委托函数（还可以用lambda函数）
+        collider->OnCollision.AddDynamic(this, &Sun::BeginCollision);
+        collider->OffCollision.AddDynamic(this, &Sun::EndCollision);
+        
+        //刚体
         rigidBody = ConstructComponent<RigidBody>();
-        rigidBody->SetGravity(1);
-        rigidBody->AddForce(Vec2D(0,-200));
+        rigidBody->SetGravityEnabled(false);
+        // rigidBody->SetGravity(1);
+        // rigidBody->AddForce(Vec2D(0,-200));
 
 
-        /**** blink ****/
+        //闪烁
         BlinkTimer.Bind(2, this, &Sun::MyBlink, true);   //白色滤镜Yes
 
-        /**** particle ****/
+        //粒子
         particle = ConstructComponent<Particle>();
         particle->AttachTo(root);
         particle->Load("mineparticle");
@@ -70,6 +75,14 @@ public:
 
     void MyBlink(){
         Sprite::Blink(0.2, 0x00FFFFFF, 45);        //白色
+    }
+
+    void BeginCollision(Collider *OverlapCollider, Object *OverlapActor){
+        std::cout << "Hello" << std::endl;
+        // Cast<AZombie*>(OverlapActor)->LoseHp(5);
+    }
+    void EndCollision(Collider *OverlapCollider, Object *OverlapActor){
+        std::cout << "Bye" << std::endl;
     }
 
 private:

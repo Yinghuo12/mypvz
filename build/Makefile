@@ -302,6 +302,33 @@ src/Collider.cpp.s:
 	$(MAKE) -f CMakeFiles/mypvz.dir/build.make CMakeFiles/mypvz.dir/src/Collider.cpp.s
 .PHONY : src/Collider.cpp.s
 
+src/CollisionManager.obj: src/CollisionManager.cpp.obj
+
+.PHONY : src/CollisionManager.obj
+
+# target to build an object file
+src/CollisionManager.cpp.obj:
+	$(MAKE) -f CMakeFiles/mypvz.dir/build.make CMakeFiles/mypvz.dir/src/CollisionManager.cpp.obj
+.PHONY : src/CollisionManager.cpp.obj
+
+src/CollisionManager.i: src/CollisionManager.cpp.i
+
+.PHONY : src/CollisionManager.i
+
+# target to preprocess a source file
+src/CollisionManager.cpp.i:
+	$(MAKE) -f CMakeFiles/mypvz.dir/build.make CMakeFiles/mypvz.dir/src/CollisionManager.cpp.i
+.PHONY : src/CollisionManager.cpp.i
+
+src/CollisionManager.s: src/CollisionManager.cpp.s
+
+.PHONY : src/CollisionManager.s
+
+# target to generate assembly for a file
+src/CollisionManager.cpp.s:
+	$(MAKE) -f CMakeFiles/mypvz.dir/build.make CMakeFiles/mypvz.dir/src/CollisionManager.cpp.s
+.PHONY : src/CollisionManager.cpp.s
+
 src/Controller.obj: src/Controller.cpp.obj
 
 .PHONY : src/Controller.obj
@@ -626,6 +653,9 @@ help:
 	@echo "... src/Collider.obj"
 	@echo "... src/Collider.i"
 	@echo "... src/Collider.s"
+	@echo "... src/CollisionManager.obj"
+	@echo "... src/CollisionManager.i"
+	@echo "... src/CollisionManager.s"
 	@echo "... src/Controller.obj"
 	@echo "... src/Controller.i"
 	@echo "... src/Controller.s"

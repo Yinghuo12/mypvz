@@ -10,6 +10,7 @@ class Camera: public SceneComponent{
     friend void BoxCollider::DrawDebugLine();
     friend class BattleController;   //for ZoomIn/ZoomOut
     friend class Particle;           //for Particle::Render()
+    friend class Object;             //for Object::DrawDebugPosition()
 
 public:
  

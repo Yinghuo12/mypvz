@@ -5,6 +5,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/mypvz.dir/src/BattleLevel.cpp.obj"
   "CMakeFiles/mypvz.dir/src/Camera.cpp.obj"
   "CMakeFiles/mypvz.dir/src/Collider.cpp.obj"
+  "CMakeFiles/mypvz.dir/src/CollisionManager.cpp.obj"
   "CMakeFiles/mypvz.dir/src/Controller.cpp.obj"
   "CMakeFiles/mypvz.dir/src/CoreMinimal.cpp.obj"
   "CMakeFiles/mypvz.dir/src/GameStatics.cpp.obj"

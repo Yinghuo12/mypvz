@@ -26,6 +26,11 @@
 },
 {
   "directory": "C:/Users/Administrator/Desktop/project/pvz/build",
+  "command": "g++   @CMakeFiles/mypvz.dir/includes_CXX.rsp -O3 -DNDEBUG   -Wno-conversion-null -std=gnu++11 -o CMakeFiles/mypvz.dir/src/CollisionManager.cpp.obj -c C:/Users/Administrator/Desktop/project/pvz/src/CollisionManager.cpp",
+  "file": "C:/Users/Administrator/Desktop/project/pvz/src/CollisionManager.cpp"
+},
+{
+  "directory": "C:/Users/Administrator/Desktop/project/pvz/build",
   "command": "g++   @CMakeFiles/mypvz.dir/includes_CXX.rsp -O3 -DNDEBUG   -Wno-conversion-null -std=gnu++11 -o CMakeFiles/mypvz.dir/src/Controller.cpp.obj -c C:/Users/Administrator/Desktop/project/pvz/src/Controller.cpp",
   "file": "C:/Users/Administrator/Desktop/project/pvz/src/Controller.cpp"
 },

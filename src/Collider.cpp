@@ -4,6 +4,16 @@
 #include "../easyx/easyx.h"
 #include "../include/Macro.h"
 #include "../include/Controller.h"
+#include "../include/CollisionManager.h"
+
+
+//调用函数包装器(发布委托)
+void CollisionDelehate::BroadCast(Collider *OverlapCollider, Object *OverlapActor){
+    for(auto& callback : callbacks){
+        callback(OverlapCollider, OverlapActor);
+    }
+}
+
 
 
 
@@ -13,6 +23,7 @@ Collider::Collider(){
 
 Collider::~Collider(){
     mainWorld.game_colliders.erase(this);
+    Clear();
 }
 
 
@@ -57,21 +68,60 @@ ColliderShape Collider::GetShape() const{
     return shape;
 }
 
+//设置碰撞模式
+void Collider::SetCollisionMode(CollisionMode mode){
+    this->mode = mode;
+}
+
+//获取碰撞模式
+CollisionMode Collider::GetCollisionMode() const{
+    return this->mode;
+}    
+
+
+
 //清空
 void Collider::Clear(){
+    for(auto& another:collisions){
+        another->collisions.erase(this);
+        OffCollision.BroadCast(another,another->owner);
+        another->OffCollision.BroadCast(this,owner);
+    }
     collisions.clear();
 }
 
 
 //插入
 void Collider::Insert(Collider *another){
-    //互相插入对方碰撞体容器
-    if(collisions.find(another) == collisions.end() && CollisionDetection(another)){
+    if(mainWorld.collisionManager->FindMapping(this->type, another->type)
+        && (collisions.find(another) == collisions.end()) && CollisionDetection(another)){
+        //互相插入对方碰撞体容器
         collisions.insert(another);
         another->collisions.insert(this);
+        //调用委托
+        OnCollision.BroadCast(another,another->owner);
+        another->OnCollision.BroadCast(this,owner);
     }       
 }
 
+
+//删除
+void Collider::Erase(){
+    collisions_to_erase.clear();
+    for(auto& another : collisions){
+        if(!CollisionDetection(another)){
+            //删除操作
+            another->collisions.erase(this);
+            collisions_to_erase.push_back(another);
+            //结束委托
+            OffCollision.BroadCast(another,another->owner);
+            another->OffCollision.BroadCast(this,owner);
+        }
+    }
+    for(auto &another:collisions_to_erase){
+        collisions.erase(another);
+    }
+}                       
 
 
 

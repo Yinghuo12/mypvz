@@ -2,7 +2,7 @@
 #include "../include/GameStatics.h"
 #include "../include/SpriteRenderer.h"
 #include "../include/Sun.h"
-
+#include "../include/Math.h"
 
 BattleLevel::BattleLevel()
 {
@@ -13,10 +13,10 @@ BattleLevel::BattleLevel()
     sunshine = GameStatics::CreateObject<Sun>();
     sunshine->SetLocalPosition(Vec2D(100, 100));
     // for (int i = 0; i < 100; i++){
-    //     GameStatics::CreateObject<Sun>(Vec2D(Math::RandomReal(-350,350), Math::RandomReal(-21800,200)));
+    //     GameStatics::CreateObject<Sun>(Vec2D(Math::RandomReal(-200,700), Math::RandomReal(-10000,0)));
     // }
 
-    // GameStatics::CreateObject<Sun>(Vec2D(Math::RandomReal(-350, 350), Math::RandomReal(-21800, 200)));
+    // GameStatics::CreateObject<Sun>(Vec2D(200,300));
 }                                                                 
 
 void BattleLevel::Update(){

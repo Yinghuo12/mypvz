@@ -4,7 +4,8 @@
 #include "./include/Math.h"
 #include "./easyx/graphics.h"
 #include "./include/ResourceManager.h"
-#include "../include/Macro.h"
+#include "./include/CollisionManager.h"
+#include "./include/Macro.h"
 // #include "./include/Controller.h"
 
 
@@ -40,6 +41,9 @@ public:
         
         mainWorld.resourcePool = new ResourceManager;  //初始化资源池
         mainWorld.resourcePool->Initialize();          //初始化资源池
+
+        mainWorld.collisionManager = new CollisionManager;  //初始化碰撞管理器
+        mainWorld.collisionManager->Initialize();           //初始化碰撞管理器
 
         BeginBatchDraw();
 

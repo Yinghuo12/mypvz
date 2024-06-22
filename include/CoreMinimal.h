@@ -51,6 +51,8 @@ public:
     static float Distance(const Vec2D& a, const Vec2D& b);
     static Vec2D RotateVec(float angle, const Vec2D& vec);
 
+    std::string ToString() const;
+
 public:
     float x;
     float y;
@@ -218,6 +220,9 @@ public:
     void AddPosition(const Vec2D &pos);
     void AddRotation(float rot);
 
+    //物体位置Debug
+    void DrawDebugPosition();
+
 private:
     std::unordered_set<Object *> children;        //与子对象的绑定
     Object *parent = nullptr;                     //与父对象的绑定
@@ -266,16 +271,17 @@ class World final{   //final表示它不能被继承
     friend class GameStatics;        //管理World类，玩家可调用
     friend class Timer;
     friend class LayerInterface;
-    friend class ImageInterface;   //for LoadSprite()
-    friend class Camera;           //for SetMainCamera()
-    friend class SpriteRenderer;     //for Render()
-    friend class Animation;         //for Load()
-    
-    friend class Collider;          //for Collider()
-    friend class CircleCollider;    //for DrawDebugLine()
-    friend class BoxCollider;       //for DrawDebugLine()
-    friend class Controller;       //for BoxCollider/CircleCollider::IsMouseOver()里的GetCursorPosition()
-    friend class Particle;         //for Load()
+    friend class ImageInterface;      //for LoadSprite()
+    friend class Camera;              //for SetMainCamera()
+    friend class SpriteRenderer;      //for Render()
+    friend class Animation;           //for Load()
+    friend class Object;              //for Object::DrawDebugPosition()
+
+    friend class Collider;            //for Collider()
+    friend class CircleCollider;      //for DrawDebugLine()
+    friend class BoxCollider;         //for DrawDebugLine()
+    friend class Controller;          //for BoxCollider/CircleCollider::IsMouseOver()里的GetCursorPosition()
+    friend class Particle;            //for Load()
 
     friend void Object::Destroy();
 
@@ -285,6 +291,7 @@ private:
     void Update_();
     void Render();
     void Input();
+    void ProcessColliderZones();
 
     /* DEBUG模式 */
     void Debug();
@@ -313,8 +320,10 @@ private:
     class Camera* mainCamera = nullptr;           // 摄像机
     class Timer *FPSClock;                        //全局计时器(显示帧率)
 
-    /* 资源池 */
+    /* 资源管理器 */
     class ResourceManager *resourcePool = nullptr;
+    /* 碰撞管理器 */
+    class CollisionManager *collisionManager = nullptr;
 };
 
 
